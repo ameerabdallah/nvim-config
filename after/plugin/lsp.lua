@@ -5,7 +5,6 @@ lsp.preset('recommended')
 lsp.ensure_installed({
 	'tsserver',
 	'eslint',
-	'lua_ls',
 	'rust_analyzer',
 })
 
@@ -15,7 +14,9 @@ lsp.configure('lua_ls', {
         Lua = {
             diagnostics = {
                 globals = { 'vim' }
-            }
+            },
+            workspace = { checkThirdParty = false },
+            telemetry = { enable = false }
         }
     }
 })
