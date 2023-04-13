@@ -1,17 +1,3 @@
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.bash_master = {
-    install_info = {
-        url = "https://github.com/tree-sitter/tree-sitter-bash",
-        files = { "src/parser.c", "src/scanner.cc" },
-        generate_requires_npm = true,
-        requires_generate_from_grammar = false,
-        branch = "master"
-    },
-    filetype = { "bash", "sh" }
-}
-
-vim.treesitter.language.register("bash_master", "bash")
-
 require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
     ensure_installed = {
@@ -24,7 +10,7 @@ require 'nvim-treesitter.configs'.setup {
         "javascript",
         "java",
         "typescript",
-        "bash_master"
+        "bash"
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)

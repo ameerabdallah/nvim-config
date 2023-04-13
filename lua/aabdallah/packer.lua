@@ -45,4 +45,6 @@ return require('packer').startup(function(use)
     use('github/copilot.vim')
     use('ThePrimeagen/vim-be-good')
     use('lambdalisue/suda.vim')
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+    use('airblade/vim-gitgutter')
 end)
