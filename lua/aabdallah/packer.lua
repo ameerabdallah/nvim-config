@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
 
 	vim.cmd('colorscheme rose-pine')
+    vim.cmd('lua ColorMyPencils()')
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
