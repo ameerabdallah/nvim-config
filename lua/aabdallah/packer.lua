@@ -12,9 +12,12 @@ return require('packer').startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use({ 'rose-pine/neovim', as = 'rose-pine' })
-
-	vim.cmd('colorscheme rose-pine')
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use{'ful1e5/onedark.nvim',
+        config = function()
+            require('onedark').setup()
+        end
+    }
     vim.cmd('lua ColorMyPencils()')
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('theprimeagen/harpoon')
@@ -47,5 +50,10 @@ return require('packer').startup(function(use)
     use('ThePrimeagen/vim-be-good')
     use('lambdalisue/suda.vim')
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-    use('airblade/vim-gitgutter')
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
 end)
