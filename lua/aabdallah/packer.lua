@@ -56,4 +56,5 @@ return require('packer').startup(function(use)
             require('gitsigns').setup()
         end
     }
+    use('unblevable/quick-scope')
 end)

@@ -50,6 +50,7 @@ if vim.fn.has("win32") == 1 or vim.fn.has("wsl") == 1 then
     }
 end
 
+vim.g.qs_highlight_on_keys = { "f", "F", "t", "T" }
 
 
 
