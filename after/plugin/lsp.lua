@@ -6,6 +6,7 @@ lsp.ensure_installed({
 	'tsserver',
 	'eslint',
 	'rust_analyzer',
+    'pyright'
 })
 
 -- Fix Undefined global 'vim'
@@ -17,6 +18,14 @@ lsp.configure('lua_ls', {
             },
             workspace = { checkThirdParty = false },
             telemetry = { enable = false }
+        }
+    }
+})
+
+lsp.configure('pyright', {
+    settings = {
+        python = {
+            pythonPath = '/usr/bin/python'
         }
     }
 })
