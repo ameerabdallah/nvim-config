@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
     use{'ful1e5/onedark.nvim',
         config = function()
             require('onedark').setup()
-            vim.cmd('lua ColorMyPencils()')
         end
     }
 
@@ -61,4 +60,7 @@ return require('packer').startup(function(use)
     }
 
     use('unblevable/quick-scope')
+
+    -- Significant speedup for Telescope
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 end)
