@@ -12,7 +12,8 @@ return require('packer').startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-    use{'ful1e5/onedark.nvim',
+    use{
+        'ful1e5/onedark.nvim',
         config = function()
             require('onedark').setup()
         end
@@ -63,4 +64,6 @@ return require('packer').startup(function(use)
 
     -- Significant speedup for Telescope
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+
+    use { 'HiPhish/nvim-ts-rainbow2', requires = 'nvim-treesitter/nvim-treesitter' }
 end)
