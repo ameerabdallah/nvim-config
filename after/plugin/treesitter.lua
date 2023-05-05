@@ -7,7 +7,7 @@ parser_config.bash_master = {
         requires_generate_from_grammar = false,
         branch = "master"
     },
-    filetype = { "bash", "sh" }
+    filetype = { "bash", "sh", "zsh", "zsh-theme" }
 }
 
 vim.treesitter.language.register("bash_master", "bash")
