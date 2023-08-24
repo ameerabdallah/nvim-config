@@ -1,5 +1,3 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 vim.cmd("let $BASH_ENV = $HOME .. '/.bash_aliases'")
 
 vim.opt.guicursor = ""
