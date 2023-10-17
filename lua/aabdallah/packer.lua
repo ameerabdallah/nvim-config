@@ -58,4 +58,5 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+    use 'karb94/neoscroll.nvim'
 end)

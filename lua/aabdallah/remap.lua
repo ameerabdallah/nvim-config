@@ -16,6 +16,19 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- toggle between tabwidth of 2 and 4
+vim.keymap.set("n", "<leader>tw", function()
+    if vim.bo.tabstop == 2 then
+        vim.bo.tabstop = 4
+        vim.bo.shiftwidth = 4
+        vim.bo.softtabstop = 4
+    else
+        vim.bo.tabstop = 2
+        vim.bo.shiftwidth = 2
+        vim.bo.softtabstop = 2
+    end
+end)
+
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
