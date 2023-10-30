@@ -1,6 +1,7 @@
 vim.cmd("let $BASH_ENV = $HOME .. '/.bash_aliases'")
 
 vim.opt.guicursor = ""
+vim.opt.ignorecase = true
 
 vim.opt.cursorline = true
 
