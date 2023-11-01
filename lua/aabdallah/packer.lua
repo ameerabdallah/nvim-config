@@ -62,4 +62,5 @@ return require('packer').startup(function(use)
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
     use 'karb94/neoscroll.nvim'
     use 'NvChad/nvim-colorizer.lua'
+    use 'prichrd/netrw.nvim'
 end)
