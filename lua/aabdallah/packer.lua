@@ -63,4 +63,5 @@ return require('packer').startup(function(use)
     use 'karb94/neoscroll.nvim'
     use 'NvChad/nvim-colorizer.lua'
     use 'prichrd/netrw.nvim'
+    use 'windwp/nvim-ts-autotag'
 end)
