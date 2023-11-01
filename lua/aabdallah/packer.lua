@@ -40,6 +40,8 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },
         }
     }
+    use 'onsails/lspkind.nvim'
+    use 'hrsh7th/nvim-cmp'
     use('github/copilot.vim')
     use('ThePrimeagen/vim-be-good')
     use('lambdalisue/suda.vim')
