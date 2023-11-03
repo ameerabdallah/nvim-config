@@ -64,4 +64,5 @@ return require('packer').startup(function(use)
     use 'NvChad/nvim-colorizer.lua'
     use 'prichrd/netrw.nvim'
     use 'windwp/nvim-ts-autotag'
+    use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
 end)
