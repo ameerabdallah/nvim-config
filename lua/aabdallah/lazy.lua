@@ -60,7 +60,13 @@ require('lazy').setup({
     'ThePrimeagen/vim-be-good',
     'lambdalisue/suda.vim',
     'lewis6991/gitsigns.nvim',
-    'unblevable/quick-scope',
+    {'unblevable/quick-scope', init = function()
+        vim.g.qs_highlight_on_keys = {'f', 'F', 't', 'T'}
+
+        -- remaps
+        vim.keymap.set("n", "<leader>qs", "<plug>(QuickScopeToggle)")
+        vim.keymap.set("x", "<leader>qs", "<plug>(QuickScopeToggle)")
+    end},
 
     -- Significant speedup for Telescope
     {
