@@ -18,7 +18,7 @@ require('lazy').setup({
     },
     {
         'nvim-telescope/telescope.nvim',
-        version = '0.1.3',
+        branch = '0.1.x',
         dependencies = { { 'nvim-lua/plenary.nvim' } }
     },
     { 'navarasu/onedark.nvim' },
@@ -44,6 +44,13 @@ require('lazy').setup({
             { 'L3MON4D3/LuaSnip' },
         }
     },
+    {
+        'numToStr/Comment.nvim',
+        opts = {
+            -- add any options here
+        },
+        lazy = false
+    },
     'onsails/lspkind.nvim',
     'hrsh7th/nvim-cmp',
     {
@@ -60,13 +67,16 @@ require('lazy').setup({
     'ThePrimeagen/vim-be-good',
     'lambdalisue/suda.vim',
     'lewis6991/gitsigns.nvim',
-    {'unblevable/quick-scope', init = function()
-        vim.g.qs_highlight_on_keys = {'f', 'F', 't', 'T'}
+    {
+        'unblevable/quick-scope',
+        init = function()
+            vim.g.qs_highlight_on_keys = { 'f', 'F', 't', 'T' }
 
-        -- remaps
-        vim.keymap.set("n", "<leader>qs", "<plug>(QuickScopeToggle)")
-        vim.keymap.set("x", "<leader>qs", "<plug>(QuickScopeToggle)")
-    end},
+            -- remaps
+            vim.keymap.set("n", "<leader>qs", "<plug>(QuickScopeToggle)")
+            vim.keymap.set("x", "<leader>qs", "<plug>(QuickScopeToggle)")
+        end
+    },
 
     -- Significant speedup for Telescope
     {
