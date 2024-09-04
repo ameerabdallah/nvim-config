@@ -1,2 +1,8 @@
 vim.keymap.set("n", "<leader>bp", ":BufferLinePick<CR>")
 vim.keymap.set("n", "<leader>bx", ":BufferLinePickClose<CR>")
+vim.keymap.set("n", "<leader>bn", ":BufferLineCycleNext<CR>")
+vim.keymap.set("n", "<leader>bp", ":BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "<leader>bd", ":BufferLineClose<CR>")
+vim.keymap.set("n", "<leader>bxo", ":BufferLineCloseOthers<CR>")
+vim.keymap.set("n", "<leader>bxl", ":BufferLineCloseLeft<CR>")
+vim.keymap.set("n", "<leader>bxr", ":BufferLineCloseRight<CR>")
