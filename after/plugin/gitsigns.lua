@@ -1,4 +1,8 @@
-require('gitsigns').setup {
+local gitsigns = require('gitsigns')
+vim.keymap.set("n", "]c", '<cmd>:Gitsigns next_hunk<CR>')
+vim.keymap.set('n', '[c', '<cmd>:Gitsigns prev_hunk<CR>')
+
+gitsigns.setup {
     signs                        = {
         add          = { text = '│' },
         change       = { text = '│' },
