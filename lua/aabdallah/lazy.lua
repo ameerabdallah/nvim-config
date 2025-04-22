@@ -26,7 +26,7 @@ require('lazy').setup({
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate'
     },
-    'mbbill/undotree',
+    { 'mbbill/undotree',      branch = "master" },
     'tpope/vim-fugitive',
     {
         'VonHeikemen/lsp-zero.nvim',
@@ -100,5 +100,5 @@ require('lazy').setup({
     'NvChad/nvim-colorizer.lua',
     'prichrd/netrw.nvim',
     'windwp/nvim-ts-autotag',
-    { "ellisonleao/glow.nvim", config = function() require("glow").setup() end },
+    { "ellisonleao/glow.nvim",          config = function() require("glow").setup() end },
 })
