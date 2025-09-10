@@ -1,4 +1,4 @@
-  require("colorizer").setup {
+local colorizer_config = {
       filetypes = { "*" },
       user_default_options = {
         RGB = true, -- #RGB hex codes
@@ -24,4 +24,11 @@
       },
       -- all the sub-options of filetypes apply to buftypes
       buftypes = {},
-  }
+}
+
+return {
+    'catgoose/nvim-colorizer.lua',
+    config = function()
+        require 'colorizer'.setup(colorizer_config)
+    end
+}

@@ -14,9 +14,5 @@ vim.filetype.add({
         ['compose%.yaml'] = 'yaml.docker-compose',
     }
 })
-require("aabdallah.lazy")
 require("aabdallah.remap")
 require("aabdallah.set")
-vim.opt.termguicolors = true
-require("bufferline").setup{}
-
