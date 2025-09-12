@@ -31,18 +31,7 @@ return {
     'lambdalisue/suda.vim',
     'lewis6991/gitsigns.nvim',
     {
-        'unblevable/quick-scope',
-        init = function()
-            vim.g.qs_highlight_on_keys = { 'f', 'F', 't', 'T' }
-
-            -- remaps
-            vim.keymap.set("n", "<leader>qs", "<plug>(QuickScopeToggle)")
-            vim.keymap.set("x", "<leader>qs", "<plug>(QuickScopeToggle)")
-        end
-    },
-    {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
-    },
-    { "ellisonleao/glow.nvim", config = function() require("glow").setup() end },
+    }
 }

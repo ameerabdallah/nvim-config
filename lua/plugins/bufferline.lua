@@ -16,6 +16,9 @@ return {
                         text_align = "left"
                     }
                 },
+                indicator = {
+                    style = "underline"
+                }
             }
         })
 

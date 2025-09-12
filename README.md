@@ -36,3 +36,4 @@ sudo apt install build-essential
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 nvm install --lts
 ```
+* There are other dependencies that may need to be installed, depending on your system and the plugins you use. Use `:Lazy health` to see what may be broken.
