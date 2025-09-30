@@ -16,3 +16,4 @@ vim.filetype.add({
 })
 require("aabdallah.remap")
 require("aabdallah.set")
+require("aabdallah.lsp")
