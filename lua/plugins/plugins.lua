@@ -1,3 +1,4 @@
+-- Throw in the plugins that don't require any configuration here
 return {
     -- the colorscheme should be available when starting Neovim
     {
@@ -33,5 +34,6 @@ return {
     {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
-    }
+    },
+    { 'isobit/vim-caddyfile' }
 }
