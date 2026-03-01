@@ -1,6 +1,6 @@
 local colorizer_config = {
       filetypes = { "*" },
-      user_default_options = {
+      options = {
         RGB = true, -- #RGB hex codes
         RRGGBB = true, -- #RRGGBB hex codes
         names = true, -- "Name" codes like Blue or blue
