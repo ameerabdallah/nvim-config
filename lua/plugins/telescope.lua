@@ -1,13 +1,27 @@
 return {
     {
         "nvim-telescope/telescope-file-browser.nvim",
-        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", 'nvim-tree/nvim-web-devicons' }
+        dependencies = {
+            "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", 'nvim-tree/nvim-web-devicons',
+            "nvim-telescope/telescope-fzf-native.nvim", "BurntSushi/ripgrep"
+        }
     },
     {
         'nvim-telescope/telescope.nvim',
-        branch = '0.1.x',
+        version = 'v0.2.*',
         dependencies = { { 'nvim-lua/plenary.nvim' } },
         config = function()
+            local telescope = require('telescope')
+            telescope.setup {
+                defaults = {
+                    file_ignore_patterns = { "node_modules", "dist", "build", "^.git/" },
+                },
+                pickers = {
+                    find_files = {
+                        hidden = true,
+                    }
+                },
+            }
             local builtin = require('telescope.builtin')
             vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
             vim.keymap.set('n', '<leader>pg', builtin.git_files, {})
